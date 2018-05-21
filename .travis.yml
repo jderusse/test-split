@@ -13,7 +13,7 @@ install:
   - git config remote.origin.mirror true
   - git fetch --unshallow || true
 script:
-  - docker run --rm -t -e GH_TOKEN -v $HOME/.cache/gitsplit:/cache/gitsplit -v ${PWD}:/srv jderusse/gitsplit
+  - docker run --rm -t -e GH_TOKEN -v $HOME/.cache/gitsplit:/cache/gitsplit -v ${PWD}:/srv jderusse/gitsplit:golang
 
 # Contains the GH_TOKEN encrypted.
 #  See https://docs.travis-ci.com/user/encryption-keys/
