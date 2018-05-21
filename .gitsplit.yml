@@ -25,8 +25,8 @@ splits:
       - "https://${GH_TOKEN}@github.com/jderusse/test-split-z.git"
   - prefix:
       # You can use several prefix in the split
-      - "src/subTree/PartC"
-      - "src/subTree/PartZ"
+      - "src/subTree/PartC:"
+      - "src/subTree/PartZ:lib/z"
     target: "https://${GH_TOKEN}@github.com/jderusse/test-split-c.git"
 
 # List of references to split (defined as regexp)
