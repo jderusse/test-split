@@ -1,13 +1,19 @@
 sudo: required
+
 services:
   - docker
+
+cache:
+  directories:
+    - "$HOME/.cache/gitsplit"
+
 install:
   - docker pull jderusse/gitsplit:golang
   - git config remote.origin.fetch "+refs/*:refs/*"
   - git config remote.origin.mirror true
   - git fetch --unshallow || true
 script:
-  - docker run --rm -t -e GH_TOKEN -v ${PWD}:/srv jderusse/gitsplit:golang
+  - docker run --rm -t -e GH_TOKEN -v $HOME/.cache/gitsplit:/cache/gitsplit -v ${PWD}:/srv jderusse/gitsplit
 
 # Contains the GH_TOKEN encrypted.
 #  See https://docs.travis-ci.com/user/encryption-keys/

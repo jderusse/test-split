@@ -1,9 +1,9 @@
 # See https://github.com/jderusse/docker-gitsplit
 
 # Path to a cache directory Used to speed up the split over time by reusing git's objects
-# cache_dir: "/cache/gitsplit"
+cache_dir: "/cache/gitsplit"
 # cache_dir: "file:///cache/gitsplit"
-cache_dir: "https://${GH_TOKEN}@github.com/jderusse/test-split-cache.git"
+# cache_dir: "https://${GH_TOKEN}@github.com/jderusse/test-split-cache.git"
 # cache_dir: "git@gitlab.com:jderusse/test-split-cache.git"
 
 # Path to the repository to split (default = current path)
